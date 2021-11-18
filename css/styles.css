@@ -347,6 +347,7 @@ letter-spacing: 0.03em;
     background-color: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
 }
 
 .team-item:last-child{
@@ -368,8 +369,8 @@ letter-spacing: 0.03em;
 .social-team{
     display: flex;
     justify-content: space-around;
-    padding-left: 49px;
-    padding-right: 41px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .icon-team{
@@ -378,9 +379,14 @@ letter-spacing: 0.03em;
     fill: var(--socials-color);
 }
 
-.social-list{
+.social-item{
     display: flex;
     align-items: center;
+    margin-right: 10px;
+}
+
+.social-item:last-child{
+    margin-right: 0;
 }
 
 .team-link{
@@ -389,7 +395,10 @@ letter-spacing: 0.03em;
     height: 44px;
     align-items: center;
     justify-content: center;
+    
 }
+
+
 
 .team-link:hover,
 .team-link:focus{
@@ -399,8 +408,11 @@ letter-spacing: 0.03em;
 
 
 
-.social-list:hover .icon-team{
+
+.team-link:hover .icon-team,
+.team-link:focus .icon-team{
     fill: var(--primary-white-color);
+   
 }
 
 
@@ -408,7 +420,8 @@ button{
     color:var(--primary-text-color);
 }
 
-button:hover{
+button:hover,
+button:focus{
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     
@@ -451,11 +464,19 @@ button:hover{
     fill: var(--socials-color);
 }
 
-.icon-clients:hover{
+.clients-link{
+    font-size: 0;
+}
+
+.clients-link:hover .icon-clients,
+.clients-link:focus .icon-clients{
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
     border-radius: 4px;
 }
+
+
+
    
 
 
@@ -531,7 +552,7 @@ margin-left: 70px;
     justify-content: space-around;
 }
 
-.social-footer-list{
+.social-footer-link{
     background-color: rgba(255, 255, 255, 0.1);
     width: 44px;
     height: 44px;
@@ -542,10 +563,13 @@ margin-left: 70px;
     margin-right: 10px;
 }
 
-.social-footer-list:hover{
+.social-footer-link:hover,
+.social-footer-link:focus{
     background-color: var(--accent-color);
+    background-size: inherit;
+    border-radius: 50%;
+   
 }
-
 
 .icon-footer{
     display: flex;
